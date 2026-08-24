@@ -42,8 +42,10 @@
     // delete the comment with the ID of 823423
     let index = comments.findIndex(item => item.id === 823423);
     
-    let arr1 = comments.filter(item => item.id !== 823423)
-    
+    let arr1 =  [
+      ...comments.slice(0,index),
+      ...comments.slice(index + 1)
+  ];
 
   </script>
 </body>
